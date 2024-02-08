@@ -6,6 +6,8 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import React, { useRef, useState } from "react";
+import data from "@emoji-mart/data";
+import Picker from "@emoji-mart/react";
 
 function Input() {
   // Initializes input with empty string and does not persist on refresh
@@ -15,6 +17,14 @@ function Input() {
   const [showEmojis, setShowEmojis] = useState(false);
 
   const addImageToPost = () => {};
+
+  const addEmoji = (e) => {
+    let sym = e.unified.split("-");
+    let codesArray = [];
+    sym.forEach((el) => codesArray.push("0x" + el));
+    let emoji = String.fromCodePoint(...codesArray);
+    setInput(input + emoji);
+  };
 
   return (
     <div
@@ -27,7 +37,7 @@ function Input() {
       />
       {/* divide-y basically puts the border after every child div so we do not need to repeat it again and again */}
       <div w-full divide-y divide-gray-700>
-        <div className={``}>
+        <div className={`${selectedFile && "pb-7"} ${input && "space-y-2.5"}`}>
           <textarea
             value={input}
             rows="2"
@@ -74,6 +84,28 @@ function Input() {
             <div className="icon">
               <CalendarIcon className="text-[#1d9bf0] h-[22px] " />
             </div>
+            {showEmojis && (
+              <Picker
+                onSelect={addEmoji}
+                style={{
+                  position: "absolute",
+                  marginTop: "465px",
+                  marginRight: 40,
+                  maxWidth: "320px",
+                  borderRadius: "20px",
+                }}
+                theme="dark"
+              />
+            )}
+            <button
+              className="bg-[#1d9bf0] text-white rounded-full px-4 py-1.5 font-bold shadow-md hover:bg-[#1a8cd8] disabled:hover:bg-[#1d9bf0] disabled:opacity-50 disabled:cursor-default"
+              // The tweet button will be disabled when no input or no selected file
+              // we did input trim instead of !input so that blank space does not count
+              disabled={!input.trim() && !selectedFile}
+              // onClick={sendPost}
+            >
+              Tweet
+            </button>
           </div>
         </div>
       </div>
