@@ -1,5 +1,4 @@
-<img src="![lol](https://github.com/Faaz-S/Twitter-Clone/assets/126310276/98fd3b38-85f3-414a-b609-050c372a35a6)" height = 150 width= 500 >
-"
+"C:\Users\DELL\Downloads\lol.jpg"
 
 ## CURRENTLY IN DEVELOPMENT
 
