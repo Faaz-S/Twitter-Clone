@@ -1,4 +1,4 @@
-"C:\Users\DELL\Downloads\lol.jpg"
+![lol](https://github.com/Faaz-S/Twitter-Clone/assets/126310276/0d369621-c3c0-4475-8bfd-85424df8e578)
 
 ## CURRENTLY IN DEVELOPMENT
 
