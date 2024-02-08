@@ -1,3 +1,6 @@
+<img src="![lol](https://github.com/Faaz-S/Twitter-Clone/assets/126310276/98fd3b38-85f3-414a-b609-050c372a35a6)" height = 150 width= 500 >
+"
+
 ## CURRENTLY IN DEVELOPMENT
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
